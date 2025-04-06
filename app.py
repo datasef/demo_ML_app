@@ -1,11 +1,10 @@
 import streamlit as st
-import joblib  # Make sure joblib is imported
+import joblib  # Import joblib for loading the model
 import numpy as np
-import pandas as pd
 from sklearn.datasets import load_iris
 
-# Load the saved model (ensure the model path is correct)
-model = joblib.load('iris_logreg_model.pkl')  # Make sure the model path is correct
+# Load the saved model
+model = joblib.load('iris_logreg_model.pkl')
 
 # Streamlit interface
 st.title('Iris Flower Classification')
