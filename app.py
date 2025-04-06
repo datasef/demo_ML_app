@@ -1,10 +1,11 @@
 import streamlit as st
-import joblib  # Import joblib for loading the model
+import pickle  # Import pickle to load the model
 import numpy as np
 from sklearn.datasets import load_iris
 
-# Load the saved model
-model = joblib.load('iris_logreg_model.pkl')
+# Load the saved model using pickle
+with open('iris_logreg_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 # Streamlit interface
 st.title('Iris Flower Classification')
